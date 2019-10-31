@@ -8,5 +8,5 @@ EXPOSE 8080
 
 ADD gcp-microservice.jar gcp-microservice.jar
 
-ENTRYPOINT ["java","-Djava.security.egd=file:\dev\.\urandom","-jar","/gcp-microservice.jar"]
+ENTRYPOINT ["sh", "-c", "java -jar gcp-microservice.jar"]
 
