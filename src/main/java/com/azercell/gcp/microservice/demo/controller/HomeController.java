@@ -10,7 +10,8 @@ public class HomeController {
 
     @GetMapping
     public String msg(){
-        return "Hello World!";
+        return "" +
+                "<h1>Moskvada bir yer deyile</h1>";
     }
 
 }
