@@ -1,0 +1,20 @@
+apiVersion: v1
+kind: Deployment
+metadata: 
+        name: gcp-demo
+spec:
+        selector:
+                matchlabels:
+                        app: gcp-microservices
+        replicas: 2
+        template:
+                metadata: 
+                  labels:
+                        app: gcp-microservice
+        spec: 
+                containers:
+                         - name: gcp-microservice
+                           image: asia.gcp.io/gcp-microservice:v1
+                           ports:
+                                   -containerPort: 80
+
